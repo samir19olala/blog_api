@@ -1,0 +1,22 @@
+{
+  "name": "blog_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Samir olala",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
