@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(errorHandler);
 
 //Mount routers
-app.use("/api/v1/categories", categoryRoute);
+app.use("/api/v1/categories",categoryRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/posts",postRoute);
 app.use("/api/v1/comments",commentRoute);

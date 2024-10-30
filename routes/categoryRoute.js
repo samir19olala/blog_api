@@ -3,9 +3,13 @@ const router = express.Router();
 const categoryController = require('../controllers/categoryController');
 
 
-router.route('/').post(categoryController.createCategory);
-router.route('/').get(categoryController.getAllCategories);
-router.route('/').put(categoryController.getCategoryById);
-router.route('/').delete(categoryController.deleleCategory);
+router.route('/')
+    .post(categoryController.createCategory)
+    .get(categoryController.getAllCategories);
+
+router.route('/:id')
+    .get(categoryController.getCategoryById)
+    .delete(categoryController.deleleCategory)
+    .put(categoryController.updateCategory);
 
 module.exports = router;
