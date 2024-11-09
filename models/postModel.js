@@ -18,12 +18,11 @@ const postSchema = new mongoose.Schema(
             ref:User,
             required:true,
         },
-        cathegory:[
-            {
+        cathegory:{
             type: mongoose.Schema.Types.ObjectId,
             ref:Cathegory,
             required:true,
-            }],
+            },
         image:{
             type:String,
         },
