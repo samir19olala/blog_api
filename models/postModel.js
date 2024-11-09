@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {Cathegory, CathegorySchema} = require('./categoryModel');
+const {Category, CategorySchema} = require('./categoryModel');
 const {User, userSchema} = require('./userModel');
 const postSchema = new mongoose.Schema(
     {
@@ -20,7 +20,7 @@ const postSchema = new mongoose.Schema(
         },
         cathegory:{
             type: mongoose.Schema.Types.ObjectId,
-            ref:Cathegory,
+            ref:Category,
             required:true,
             },
         image:{

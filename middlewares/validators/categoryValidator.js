@@ -3,7 +3,7 @@ const {
   validateRequest,
   validateMongoId,
 } = require("../../utils/validationUtil");
-const Category = require("../../models/categoryModel")
+const {Category} = require("../../models/categoryModel")
 
 exports.validateCategoryCreate = [
   body("name")
