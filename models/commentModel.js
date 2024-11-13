@@ -6,8 +6,10 @@ const commentSchema = new mongoose.Schema(
     {
         content:{
             type:String,
-            required:true,
+            required:[true,"Please add a content"],
             trim:true,
+            minlength:[2,"Comment be at least 2 characters"],
+            maxlength:[1000,"Comment be at most 1000 characters"]
         },
         author:{
             type: mongoose.Schema.Types.ObjectId,

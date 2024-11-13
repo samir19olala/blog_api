@@ -1,10 +1,10 @@
-const { param,validationResult } = require("express-validator");
-const ApiResponse = require("./apiResponse");
+const { param, validationResult } = require("express-validator");
 
 const validateRequest = (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return ApiResponse.error("Validation Error", 400, errors.array()).send(res);
+    next(errors);
+    return;
   }
   next();
 };
@@ -14,6 +14,6 @@ const validateMongoId = (field) =>
     .notEmpty()
     .withMessage(`${field} is required`)
     .isMongoId()
-    .withMessage(`Invalid ${field}`);
+    .withMessage(`Invalid MongoDB id : ${field}`);
 
 module.exports = { validateRequest, validateMongoId };
