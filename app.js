@@ -17,6 +17,7 @@ connectDB()
 const app = express();
 //body parser
 app.use(express.json());
+app.use(express.static('public'));
 
 //gloabl management middelware errors
 
