@@ -43,3 +43,4 @@ exports.getAllUsers = AsyncHandler(async (req, res) => {
     }
     return ApiResponse.success('Users retrieved', users).send(res);
 });
+

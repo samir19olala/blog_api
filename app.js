@@ -3,7 +3,7 @@ const express = require('express');
 const errorHandler = require('./middlewares/errorHandler');
 const connectDB = require('./config/db');
 const categoryRoute = require('./routes/categoryRoute');
-const userRoute = require('./routes/userRoute');
+const hostRoute = require('./routes/hostRoute');
 const commentRoute = require('./routes/commentRoute');
 const postRoute = require('./routes/postRoute');
 
@@ -30,7 +30,7 @@ app.use(errorHandler);
 
 //Mount routers
 app.use("/api/v1/categories",categoryRoute);
-app.use("/api/v1/users", userRoute);
+app.use("/api/v1/users", hostRoute);
 app.use("/api/v1/posts",postRoute);
 app.use("/api/v1/comments",commentRoute);
 

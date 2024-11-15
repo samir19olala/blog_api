@@ -1,12 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const {
+const {registerUser} = require('../controllers/authController')
+const { 
+    validateUserRegistration,
 
-} = require('../middlewares/validators/userValidator')
+} = require('../middlewares/validators/authValidator.js')
+
+
+
 
 router.route('/')
-    .post(userController.createUser)
+    .post(validateUserRegistration,userController)
     .get(userController.getAllUsers);
 
 router.route('/:id')

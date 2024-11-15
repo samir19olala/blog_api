@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
-
+// modules can manage email send {mailtrap.io sendgrid}
+//@important mailtrap si required for this api version  
 const sendEmail = async (options) => {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
